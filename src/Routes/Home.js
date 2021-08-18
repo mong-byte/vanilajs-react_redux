@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import ToDo from "../components/ToDo";
-import { addToDo, deleteToDo } from "../store";
+import { addToDo } from "../store";
 
 const Home = ({ toDos, dispatchAdd }) => {
   const [text, setText] = useState("");
@@ -42,7 +42,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     dispatchAdd: (text) => dispatch(addToDo(text)),
-    dispatchRemove: (id) => dispatch(deleteToDo(id)),
   };
 };
 

@@ -6,10 +6,8 @@ import { deleteToDo } from "../store";
 const ToDo = ({ text, id, dispatchRemove }) => {
   return (
     <li>
-      <Link to={`/${id}`}>
-        {text}
-        <button onClick={dispatchRemove}>del</button>
-      </Link>
+      <Link to={`/${id}`}>{text}</Link>
+      <button onClick={dispatchRemove}>del</button>
     </li>
   );
 };
